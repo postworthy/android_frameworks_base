@@ -673,6 +673,7 @@ public final class NfcAdapter {
         }
     }
     
+    /** @hide */
     public boolean nfc_enable() {
         return enable();
     }
@@ -705,6 +706,7 @@ public final class NfcAdapter {
         }
     }
     
+    /** @hide */
     public boolean nfc_disable() {
         return disable();
     }
