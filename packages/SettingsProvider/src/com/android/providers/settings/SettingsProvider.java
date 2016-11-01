@@ -1054,7 +1054,7 @@ public class SettingsProvider extends ContentProvider {
         //    return true;
         //}
 
-        return false;
+        //return false;
     }
 
     private void validateSystemSettingValue(String name, String value) {
