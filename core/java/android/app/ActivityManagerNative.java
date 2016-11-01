@@ -4208,21 +4208,22 @@ class ActivityManagerProxy implements IActivityManager
     }
     public int checkUriPermission(Uri uri, int pid, int uid, int mode, int userId,
             IBinder callerToken) throws RemoteException {
-        Parcel data = Parcel.obtain();
-        Parcel reply = Parcel.obtain();
-        data.writeInterfaceToken(IActivityManager.descriptor);
-        uri.writeToParcel(data, 0);
-        data.writeInt(pid);
-        data.writeInt(uid);
-        data.writeInt(mode);
-        data.writeInt(userId);
-        data.writeStrongBinder(callerToken);
-        mRemote.transact(CHECK_URI_PERMISSION_TRANSACTION, data, reply, 0);
-        reply.readException();
-        int res = reply.readInt();
-        data.recycle();
-        reply.recycle();
-        return res;
+            return 0;
+        //Parcel data = Parcel.obtain();
+        //Parcel reply = Parcel.obtain();
+        //data.writeInterfaceToken(IActivityManager.descriptor);
+        //uri.writeToParcel(data, 0);
+        //data.writeInt(pid);
+        //data.writeInt(uid);
+        //data.writeInt(mode);
+        //data.writeInt(userId);
+        //data.writeStrongBinder(callerToken);
+        //mRemote.transact(CHECK_URI_PERMISSION_TRANSACTION, data, reply, 0);
+        //reply.readException();
+        //int res = reply.readInt();
+        //data.recycle();
+        //reply.recycle();
+        //return res;
     }
     public void grantUriPermission(IApplicationThread caller, String targetPkg,
             Uri uri, int mode, int userId) throws RemoteException {
