@@ -261,7 +261,7 @@ public final class NfcAdapter {
     public static final String EXTRA_READER_PRESENCE_CHECK_DELAY = "presence";
 
     /** @hide */
-    @SystemApi
+    
     public static final int FLAG_NDEF_PUSH_NO_CONFIRM = 0x1;
 
     /** @hide */
@@ -389,7 +389,7 @@ public final class NfcAdapter {
      * handler to unlock the device given an NFC tag at the lockscreen.
      * @hide
      */
-    @SystemApi
+    
     public interface NfcUnlockHandler {
         /**
          * Called at the lock screen to attempt to unlock the device with the given tag.
@@ -663,7 +663,7 @@ public final class NfcAdapter {
      *
      * @hide
      */
-    @SystemApi
+    
     public boolean enable() {
         try {
             return sService.enable();
@@ -691,7 +691,7 @@ public final class NfcAdapter {
      *
      * @hide
      */
-    @SystemApi
+    
     public boolean disable() {
         try {
             return sService.disable(true);
@@ -705,7 +705,7 @@ public final class NfcAdapter {
      * Disable NFC hardware.
      * @hide
     */
-    @SystemApi
+    
     public boolean disable(boolean persist) {
         try {
             return sService.disable(persist);
@@ -985,7 +985,7 @@ public final class NfcAdapter {
     /**
      * @hide
      */
-    @SystemApi
+    
     public void setNdefPushMessage(NdefMessage message, Activity activity, int flags) {
         if (activity == null) {
             throw new NullPointerException("activity cannot be null");
@@ -1413,7 +1413,7 @@ public final class NfcAdapter {
      * <p>This API is for the Settings application.
      * @hide
      */
-    @SystemApi
+    
     public boolean enableNdefPush() {
         try {
             return sService.enableNdefPush();
@@ -1428,7 +1428,7 @@ public final class NfcAdapter {
      * <p>This API is for the Settings application.
      * @hide
      */
-    @SystemApi
+    
     public boolean disableNdefPush() {
         try {
             return sService.disableNdefPush();
@@ -1514,7 +1514,7 @@ public final class NfcAdapter {
      *
      * @hide
      */
-    @SystemApi
+    
     public boolean addNfcUnlockHandler(final NfcUnlockHandler unlockHandler,
                                        String[] tagTechnologies) {
         // If there are no tag technologies, don't bother adding unlock handler
@@ -1558,7 +1558,7 @@ public final class NfcAdapter {
      *
      * @hide
      */
-    @SystemApi
+    
     public boolean removeNfcUnlockHandler(NfcUnlockHandler unlockHandler) {
         try {
             synchronized (mLock) {
