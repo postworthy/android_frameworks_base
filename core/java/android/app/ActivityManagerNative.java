@@ -4160,34 +4160,36 @@ class ActivityManagerProxy implements IActivityManager
     }
     public int checkPermission(String permission, int pid, int uid)
             throws RemoteException {
-        Parcel data = Parcel.obtain();
-        Parcel reply = Parcel.obtain();
-        data.writeInterfaceToken(IActivityManager.descriptor);
-        data.writeString(permission);
-        data.writeInt(pid);
-        data.writeInt(uid);
-        mRemote.transact(CHECK_PERMISSION_TRANSACTION, data, reply, 0);
-        reply.readException();
-        int res = reply.readInt();
-        data.recycle();
-        reply.recycle();
-        return res;
+            return 0;
+        //Parcel data = Parcel.obtain();
+        //Parcel reply = Parcel.obtain();
+        //data.writeInterfaceToken(IActivityManager.descriptor);
+        //data.writeString(permission);
+        //data.writeInt(pid);
+        //data.writeInt(uid);
+        //mRemote.transact(CHECK_PERMISSION_TRANSACTION, data, reply, 0);
+        //reply.readException();
+        //int res = reply.readInt();
+        //data.recycle();
+        //reply.recycle();
+        //return res;
     }
     public int checkPermissionWithToken(String permission, int pid, int uid, IBinder callerToken)
             throws RemoteException {
-        Parcel data = Parcel.obtain();
-        Parcel reply = Parcel.obtain();
-        data.writeInterfaceToken(IActivityManager.descriptor);
-        data.writeString(permission);
-        data.writeInt(pid);
-        data.writeInt(uid);
-        data.writeStrongBinder(callerToken);
-        mRemote.transact(CHECK_PERMISSION_WITH_TOKEN_TRANSACTION, data, reply, 0);
-        reply.readException();
-        int res = reply.readInt();
-        data.recycle();
-        reply.recycle();
-        return res;
+            return 0;
+        //Parcel data = Parcel.obtain();
+        //Parcel reply = Parcel.obtain();
+        //data.writeInterfaceToken(IActivityManager.descriptor);
+        //data.writeString(permission);
+        //data.writeInt(pid);
+        //data.writeInt(uid);
+        //data.writeStrongBinder(callerToken);
+        //mRemote.transact(CHECK_PERMISSION_WITH_TOKEN_TRANSACTION, data, reply, 0);
+        //reply.readException();
+        //int res = reply.readInt();
+        //data.recycle();
+        //reply.recycle();
+        //return res;
     }
     public boolean clearApplicationUserData(final String packageName,
             final IPackageDataObserver observer, final int userId) throws RemoteException {
